@@ -1,0 +1,58 @@
+/* color */
+$primary: rgb(68, 215, 182); // primary color alias tealish
+
+$black: rgb(0, 0, 0); // normal font color
+$white: rgb(255, 255, 255);
+
+$gray-dark: rgb(50, 50, 50); // button-gray-dark, search label, table head
+$gray: rgb(85, 85, 85); // table head border-top, form label, menu title
+$gray-light: rgb(200, 200, 200); // sub title border-bottom
+$gray-light-1: rgb(155, 155, 155); // table head border-bottom
+$gray-light-2: rgb(220, 220, 220); // table body border
+$gray-light-3: rgb(232, 232, 232); // sub title border-bottom
+$gray-light-4: rgb(241, 243, 244); // input background
+$gray-light-5: rgb(250, 250, 250); // sub title border-bottom
+
+
+$white-gray: #fafafa; // #fafafa
+
+$primary-light: #74db8c; // form label * .5
+$primary-light-1: rgb(157, 240, 222);;
+$green: #008000; // #f03c3c
+$red: rgb(240, 60, 60); // #f03c3c
+$red-light: rgb(224, 180, 180); // #e0b4b4
+$orange: rgb(255, 160, 0); // #ffa000
+$skyblue: rgb(133, 183, 217); // #85b7d9
+$skyblue-light: rgb(168, 193, 209); // #85b7d9
+$blue: rgb(61, 158, 214); // #cbd2d6
+$purple: rgb(138, 73, 195); // #8a49c3
+
+
+@mixin clearfix() {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+// common
+@mixin link() {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin grab {
+	cursor: move; /* fallback if grab cursor is unsupported */
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+
+	/* (Optional) Apply a "closed-hand" cursor during drag operation. */
+	&:active {
+		cursor: grabbing;
+		cursor: -moz-grabbing;
+		cursor: -webkit-grabbing;
+	}
+}

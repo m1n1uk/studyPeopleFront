@@ -1,0 +1,60 @@
+@charset 'utf-8';
+@import '@/assets/scss/variable.scss';
+
+.search_wrap {
+	position: relative;
+	padding: 1.071rem 0;
+	@include clearfix;
+
+	.row:not(:first-child) {
+		margin-top: .5rem;
+	}
+
+	.label_wrap {
+		display: inline;
+		font-size: 1rem;
+		font-weight: bold;
+		padding: 1rem .5rem 1rem 1rem;
+		color: $gray-dark;
+	}
+
+	.keyword_wrap {
+		display: inline;
+		margin-right: .5rem;
+		font-size: 1rem;
+		font-weight: bold;
+		input:not([type='checkbox']):not([type='radio']),
+		select {
+			padding: .1rem .5rem;
+			height: 2.143rem;
+			width: 10.71rem;
+			font-weight: bold;
+			border: 1px solid $gray-light-4;
+			background-color: $gray-light-4;
+			border-radius: .25rem;
+			outline: 0;
+			vertical-align: middle;
+			&::placeholder {
+				font-weight: bold;
+				color: $gray-light;
+			}
+
+			&:focus,
+			&:active { border-color: $primary; }
+
+			&.read_only,
+			&.readonly {
+				background-color: $gray;
+				&::placeholder {
+					font-weight: bold;
+					color: $gray-light;
+				}
+			}
+		}
+	}
+
+	.separator {
+		margin: 0 .8rem;
+		color: $gray-light;
+	}
+}

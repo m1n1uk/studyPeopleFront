@@ -1,0 +1,62 @@
+@charset 'utf-8';
+@import '@/assets/scss/variable.scss';
+
+body { overflow: visible; }
+
+// Common
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.pull-left { float: left; }
+.pull-right { float: right; }
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.hidden_txt {
+	font-size: 0 !important;
+}
+
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// Text
+.txt_primary { color: #409EFF; }
+.txt_green { color: #67C23A; }
+.txt_orange { color: #E6A23C; }
+.txt_red { color: #F56C6C; }
+.txt_gray { color: #909399; }
+.txt_black { color: #000 !important; }
+.txt_bold { font-weight: bold; }
+.txt_underline { text-decoration: underline !important; }
+
+// display
+.dis_none { display: none !important; }
+.not_allowed { cursor: not-allowed; }
+
+.hover:hover { cursor: pointer; }
+
+// common
+.link {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.fileLink { font-weight: 700; }
+.fileLink:hover {
+	color: $blue !important;
+	text-decoration: underline !important;
+	cursor: pointer !important;
+}
+
+// text
+.text--underline { text-decoration: underline; }
+.text--underline-hover:hover { text-decoration: underline; }
+.text--bold { font-weight: 600; }
+.text--right { text-align: right; }
+.text--left { text-align: left; }

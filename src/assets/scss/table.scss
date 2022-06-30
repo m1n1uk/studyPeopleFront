@@ -1,0 +1,66 @@
+@charset 'utf-8';
+@import '@/assets/scss/variable.scss';
+
+.table_wrap {
+	padding: .25rem 0;
+
+	caption { display: none; }
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		text-align: center;
+		tbody tr {
+			&:hover { background-color: rgba($primary, .03); }
+		}
+	}
+
+	&.table--hover {
+		tbody tr {
+			cursor: pointer;
+			&:hover { background-color: rgba($primary, .05); }
+		}
+	}
+
+	&.table--fixed { table-layout: fixed; }
+
+	thead th {
+		border-top: .1429rem solid $gray;
+		border-right: 0;
+		border-bottom: 1px solid $gray-light-1;
+		border-left: 0;
+		font-size: 1rem;
+		padding: .6429rem 0;
+	}
+
+
+	tbody td {
+		border-bottom: 1px solid $gray-light-2;
+		border-right: 1px solid $gray-light-2;
+		border-left: 1px solid $gray-light-2;
+		padding: .5714rem 0;
+		&:first-child {
+			border-left: 0;
+		}
+		&:last-child {
+			border-right: 0;
+		}
+	}
+
+	.table_text_left {
+		width: 100%;
+		text-align: left;
+	}
+
+	.ql-align-center {
+    text-align: center !important;
+	}
+	
+	.ql-align-right {
+		text-align: right;
+	}
+}
+
+.tr_sum {
+  background-color: #44d7b6;
+}
